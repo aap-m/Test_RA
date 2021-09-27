@@ -1,0 +1,23 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item class="slds-align-middle">
+            <lightning-combobox class="slds-align-middle" 
+                                value={value} 
+                                options={statusPickListValues} 
+                                onchange={handleTypeChange}>
+            </lightning-combobox>
+        </lightning-layout-item>
+    </lightning-layout>    
+    <lightning-layout>
+        <div class="container">
+            <template for:each={recordList} for:item="acc">
+                <c-account-tile 
+                    key={acc.Id} 
+                    get-id={acc.Id}
+                    get-logo={acc.Logo__c}
+                    ontileclick={handleTileClick}>
+                </c-account-tile>
+            </template>
+        </div>
+    </lightning-layout>
+</template>
