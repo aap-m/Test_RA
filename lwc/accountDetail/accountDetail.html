@@ -1,0 +1,48 @@
+
+<template>
+    <div class="slds-card">
+        <div class="slds-title">Details</div>
+        <template if:true={detailForm}>
+            <article class="slds-box">
+                <div>
+                    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                        <div class="slds-media__figure">
+                            <span class="slds-icon_container slds-icon-standard-account" title="account">
+                                <img class="slds-icon slds-icon_small" aria-hidden="true" src={subject.Logo__c}>  
+                            </span>
+                        </div>
+                        <div class="slds-media__body">
+                            <h2 class="slds-card__header-title">
+                                <span>{subject.Name}</span>
+                            </h2>
+                        </div>
+                        <div class="slds-no-flex">
+                            <lightning-button variant="brand-outline" label="Full Details" onclick={navigateFullDetails} class="slds-m-right_x-small"> </lightning-button>
+                        </div>
+                    </header>
+                </div>
+                <div class="slds-card__body slds-card__body_inner">
+                    <lightning-record-view-form
+                    record-id={subject.Id}
+                    object-api-name="Account">
+                        <div>
+                            <lightning-output-field field-name="Type">
+                            </lightning-output-field>
+                            <lightning-output-field field-name="Industry">
+                            </lightning-output-field>
+                            <lightning-output-field field-name="Budget__c">
+                            </lightning-output-field>
+                            <lightning-output-field field-name="Description">
+                            </lightning-output-field>
+                        </div>
+                    </lightning-record-view-form>
+                </div>
+            </article>
+        </template>
+        <template if:false={detailForm}>
+            <lightning-card >
+                <div class="slds-text-body_small">No account selected</div>
+            </lightning-card>
+        </template>
+    </div>
+</template>
