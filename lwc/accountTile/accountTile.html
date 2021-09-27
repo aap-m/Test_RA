@@ -1,0 +1,25 @@
+<template>
+    <article class="slds-box">
+        <div class="slds-media__figure">
+            <a onclick={tileClick} name={getId}>
+                <img class="logo" src={getLogo}></img>
+                <lightning-record-view-form
+                    record-id={getId}
+                    object-api-name="Account">
+                    <div>
+                        <lightning-output-field field-name="Name">
+                        </lightning-output-field>
+                        <lightning-output-field field-name="OwnerId">
+                        </lightning-output-field>
+                        <lightning-output-field field-name="Budget__c">
+                        </lightning-output-field>
+                        <lightning-output-field field-name="employee_number__c">
+                        </lightning-output-field>
+                        <lightning-output-field field-name="Type">
+                        </lightning-output-field>   
+                    </div>
+                </lightning-record-view-form>   
+            </a>
+        </div>
+    </article>
+</template>
