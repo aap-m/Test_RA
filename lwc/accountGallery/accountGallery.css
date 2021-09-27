@@ -1,0 +1,36 @@
+.wrapper{
+  min-height: 100vh;
+  background: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  height: 50px;
+  background: rgb(255, 255, 255);
+  color: rgb(46, 46, 46);
+  font-size: x-large;
+  padding: 10px;
+}
+.content {
+  display: flex;
+  flex: 1;
+  background: rgb(255, 255, 255);
+  color: #000; 
+
+}
+.columns{
+  display: flex;
+  flex:1;
+}
+.main{
+  width: 70%;
+  flex: 1;
+  order: 2;
+  background: rgb(255, 255, 255);
+}
+.sidebar{ 
+  width: 30%;
+  height: 400px;
+  order: 3;
+  background: rgb(255, 255, 255);
+}
