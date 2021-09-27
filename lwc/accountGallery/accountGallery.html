@@ -1,0 +1,15 @@
+<template>
+   <div class="wrapper">
+        <header class="header">Find an account</header>
+        <section class="content">
+            <div class="columns">
+                <main class="main" >
+                    <c-account-list onaccountselected={handleAccountSelected}></c-account-list>
+                </main>
+                <aside class="sidebar">
+                    <c-account-detail account-id={selectedAccountId}></c-account-detail>
+                </aside>
+            </div>
+        </section>
+    </div>
+</template>
